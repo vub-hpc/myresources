@@ -1,0 +1,469 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime       49.6  h      150.0  h    33% |[34m███████[0m-------------| ([34m-[0m)            1253502 R 8sitesdiacharge_12569_nic49
+      memory        0.3 gb        1.0 gb    26% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        0.0           1          0% |[31m[0m--------------------| ([31mbad[0m)    
+
+    walltime       32.8  h      150.0  h    22% |[34m████[0m----------------| ([34m-[0m)            1254088 R sec_24229_nic50
+      memory        0.1 gb        1.0 gb     9% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.0           1          0% |[31m[0m--------------------| ([31mbad[0m)    
+
+    walltime       32.7  h      150.0  h    22% |[34m████[0m----------------| ([34m-[0m)            1254098 R tert_4327_nic49
+      memory        0.1 gb        1.0 gb     9% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.0           1          0% |[31m[0m--------------------| ([31mbad[0m)    
+
+    walltime       32.6  h      150.0  h    22% |[34m████[0m----------------| ([34m-[0m)            1254107 R all_25759_nic50
+      memory        0.1 gb        1.0 gb     9% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.0           1          0% |[31m[0m--------------------| ([31mbad[0m)    
+
+    walltime       21.0  h      100.0  h    21% |[34m████[0m----------------| ([34m-[0m)            1255173 R ada_elin_COH_COH_COH_CSOOOH_CSH_CPh_CSOOOH_CNOO_CSOOOH_CSH.com
+      memory        0.7 gb        2.0 gb    38% |[32m████████[0m------------| ([32mgood[0m)   
+       cores        1.0           8         12% |[31m██[0m------------------| ([31mbad[0m)    
+Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+
+    walltime        2.1  h      100.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1255403 C ada_elin_CH_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        5.5  h      100.0  h     5% |[31m█[0m-------------------| ([31mbad[0m)          1255404 C ada_elin_CNHH_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        2.0           4         50% |[31m██████████[0m----------| ([31mbad[0m)    
+Alert: only 2.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+
+    walltime        2.7  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255405 C ada_elin_CNOO_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    22% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        2.5  h      100.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1255406 C ada_elin_CSH_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.0  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255407 C ada_elin_CPh_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.5 gb        2.0 gb    24% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        2.9  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255408 C ada_elin_CCHO_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    21% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.2  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255409 C ada_elin_CSOOOH_CCHO_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    22% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255410 C ada_elin_CNOO_CSH_CH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.0           4         75% |[33m███████████████[0m-----| ([33mmedium[0m) 
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255411 C ada_elin_CNOO_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255412 C ada_elin_CNOO_CSH_CNOO_CNHH.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.8  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255413 C ada_elin_CNOO_CSH_COH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255414 C ada_elin_CNOO_CSH_CSH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255415 C ada_elin_CNOO_CSH_CPh_CNHH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255416 C ada_elin_CNOO_CSH_CCHO_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255477 C ada_elin_CNOO_CSH_CNHH_CH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255478 C ada_elin_CNOO_CSH_CNHH_CNOO.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.8  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255479 C ada_elin_CNOO_CSH_CNHH_COH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255480 C ada_elin_CNOO_CSH_CNHH_CSH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.1  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255481 C ada_elin_CNOO_CSH_CNHH_CPh.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.3  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255482 C ada_elin_CNOO_CSH_CNHH_CCHO.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.1  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255483 C ada_elin_CNOO_CSH_CNHH_CSOOOH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.2  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255555 C ada_elin_CH_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.3  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255556 C ada_elin_CNHH_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.3  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255557 C ada_elin_COH_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.3  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255558 C ada_elin_CSH_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.1  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255559 C ada_elin_CPh_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.8  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255560 C ada_elin_CCHO_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.8           4         95% |[32m███████████████████[0m-| ([32mgood[0m)   
+
+    walltime        0.4  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255561 C ada_elin_CSOOOH_CSH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.6  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255581 C ada_elin_CNOO_CH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255582 C ada_elin_CNOO_CNHH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.3  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255583 C ada_elin_CNOO_CNOO_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.0           4         75% |[33m███████████████[0m-----| ([33mmedium[0m) 
+
+    walltime        0.6  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255584 C ada_elin_CNOO_COH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.4  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255585 C ada_elin_CNOO_CPh_CNHH_CNHH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.8  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255586 C ada_elin_CNOO_CCHO_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.4  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255587 C ada_elin_CNOO_CSOOOH_CNHH_CNHH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255620 C ada_elin_CNOO_CH_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    21% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.6           4         91% |[32m██████████████████[0m--| ([32mgood[0m)   
+
+    walltime        3.3  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255621 R ada_elin_CNOO_CNHH_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    21% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.0  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255622 C ada_elin_CNOO_COH_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    21% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.3  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255623 R ada_elin_CNOO_CSH_CSOOOH_CSH_CPh_COH.com
+      memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.3  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255624 R ada_elin_CNOO_CPh_CSOOOH_CSH_CPh_COH.com
+      memory        0.5 gb        2.0 gb    24% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.3  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255625 R ada_elin_CNOO_CSOOOH_CSOOOH_CSH_CPh_COH.com
+      memory        0.5 gb        2.0 gb    23% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        3.9           4         98% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.6  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255626 C ada_elin_CNOO_CNHH_CNHH_CH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255627 C ada_elin_CNOO_CNHH_CNHH_CNOO.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.6  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255628 C ada_elin_CNOO_CNHH_CNHH_COH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.6  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255629 C ada_elin_CNOO_CNHH_CNHH_CSH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.2  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255630 R ada_elin_CNOO_CNHH_CNHH_CPh.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        1.0           4         25% |[31m█████[0m---------------| ([31mbad[0m)    
+Alert: only 1.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+
+    walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255631 C ada_elin_CNOO_CNHH_CNHH_CCHO.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.9  h      100.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1255632 C ada_elin_CNOO_CNHH_CNHH_CSOOOH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255634 R dia_charge8s_CCOO_CNHHH_O_O_CH_CPh_CPh_CPh.com
+      memory        0.6 gb        2.0 gb    29% |[32m██████[0m--------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255635 R dia_charge8s_CCOO_CNHHH_O_O_CF_CPh_CPh_CPh.com
+      memory        0.6 gb        2.0 gb    29% |[32m██████[0m--------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255636 R dia_charge8s_CCOO_CNHHH_O_O_CPh_CPh_CPh_CPh.com
+      memory        0.7 gb        2.0 gb    34% |[32m███████[0m-------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255637 R dia_charge8s_CCOO_CNHHH_O_O_COCHHH_CPh_CPh_CPh.com
+      memory        0.6 gb        2.0 gb    31% |[32m██████[0m--------------| ([32mgood[0m)   
+       cores        3.2           4         81% |[33m████████████████[0m----| ([33mmedium[0m) 
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255638 R dia_charge8s_CCOO_CNHHH_O_O_N_CPh_CPh_CPh.com
+      memory        0.6 gb        2.0 gb    29% |[32m██████[0m--------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        3.1  h       30.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1255639 R dia_charge8s_CCOO_CNHHH_O_O_S_CPh_CPh_CPh.com
+      memory        0.6 gb        2.0 gb    29% |[32m██████[0m--------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.1  h      150.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255684 C divin3_11149_nic50
+      memory        0.1 gb        1.0 gb     9% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.1           1         10% |[31m██[0m------------------| ([31mbad[0m)    
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255685 C ada_getdivers_B_P_B_B_CCHO_CSOOOH_COH_CH_COH_CCHO.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255686 C ada_getdivers_CPh_CCHO_CH_CH_CSH_CSH_B_P_COH_CSOOOH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255687 C ada_getdivers_CCHO_COH_COH_CSH_P_CCHO_CSOOOH_CPh_CPh_CNOO.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255688 C ada_getdivers_CH_CSOOOH_B_P_COH_O_O_CPh_CSH_CNHH.com
+      memory        0.3 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255689 C ada_getdivers_N_CNHH_N_CCHO_CNHH_CCHO_P_B_CPh_CSOOOH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255690 C ada_getdivers_COH_CH_B_B_P_CCHO_B_B_S_N.com
+      memory        0.3 gb        2.0 gb    13% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255691 C ada_getdivers_P_CPh_CNOO_CNOO_B_CNOO_CSOOOH_N_CPh_P.com
+      memory        0.2 gb        2.0 gb    12% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.8           4          -  |                    |          
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255692 C ada_getdivers_CSOOOH_CSOOOH_CSOOOH_CCHO_CH_S_B_CH_P_N.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255693 C ada_getdivers_CPh_CPh_CPh_CCHO_CCHO_CNHH_O_S_CH_O.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         98% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255694 C ada_getdivers_P_B_CSOOOH_CSH_CPh_CNOO_CNOO_S_CCHO_B.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         98% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255695 C ada_getdivers_CCHO_CSOOOH_P_CNOO_CSOOOH_CNOO_COH_CH_CNHH_CCHO.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255696 C ada_getdivers_B_CNHH_CH_COH_O_CCHO_CPh_CSH_CCHO_CNHH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255697 C ada_getdivers_P_CPh_CPh_CSH_CNOO_CPh_N_COH_CSOOOH_N.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255698 C ada_getdivers_CNHH_CSOOOH_CNHH_CCHO_N_B_CSH_CPh_CSOOOH_P.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255699 C ada_getdivers_P_CSH_P_CSH_B_CH_S_P_O_P.com
+      memory        0.3 gb        2.0 gb    13% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255700 C ada_getdivers_CH_CNOO_CPh_P_CSH_CSOOOH_CCHO_CPh_CSH_CNHH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255701 C ada_getdivers_CSOOOH_COH_CCHO_N_P_CSOOOH_CNOO_COH_B_CNHH.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255702 C ada_getdivers_B_B_COH_CSH_CCHO_N_P_O_CSOOOH_CSH.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255703 C ada_getdivers_N_N_CSOOOH_CNOO_B_CCHO_CSH_CPh_O_P.com
+      memory        0.2 gb        2.0 gb    12% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        1.0           4          -  |                    |          
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255704 C ada_getdivers_CPh_CCHO_CCHO_CCHO_O_B_N_CSH_S_P.com
+      memory        0.3 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.1  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255705 C ada_getdivers_B_B_B_CH_CSOOOH_CNOO_CNHH_CH_N_P.com
+      memory        0.3 gb        2.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.0           4         74% |[33m███████████████[0m-----| ([33mmedium[0m) 
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        1.4  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255706 C ada_getdivers_CCHO_CH_CH_P_CNHH_COH_O_CNOO_CPh_N.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.6  h      100.0  h     2% |[34m[0m--------------------| ([34m-[0m)            1255707 R ada_getdivers_CNHH_CSOOOH_B_COH_B_COH_CPh_CCHO_O_COH.com
+      memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.6  h      100.0  h     2% |[34m[0m--------------------| ([34m-[0m)            1255708 R ada_getdivers_CSOOOH_CSH_B_N_CSOOOH_CSOOOH_S_CNHH_CPh_CSH.com
+      memory        0.5 gb        2.0 gb    24% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.6  h      100.0  h     2% |[34m[0m--------------------| ([34m-[0m)            1255709 R ada_getdivers_CPh_CNOO_CSH_CPh_P_B_CH_CCHO_COH_CNOO.com
+      memory        0.5 gb        2.0 gb    24% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      150.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255717 R divin3_12135_nic50
+      memory        0.1 gb        1.0 gb     9% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.0           1          1% |[31m[0m--------------------| ([31mbad[0m)    
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255718 C ada_getdivers_B_CH_B_CH_CCHO_CH_CCHO_CH_CSOOOH_CH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255719 C ada_getdivers_P_CH_P_CH_CH_CH_CH_CCHO_CNOO_CSH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.4  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255720 C ada_getdivers_P_CH_CH_CH_CH_COH_B_CSH_CSH_COH.com
+      memory        0.3 gb        2.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255721 C ada_getdivers_CH_CPh_CCHO_CH_CH_CH_CSH_CH_CH_O.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255722 R ada_getdivers_CH_B_CH_CCHO_CH_COH_CH_P_CCHO_CPh.com
+      memory        0.3 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255723 C ada_getdivers_CH_COH_CSH_CH_P_CH_CH_CSOOOH_CH_CH.com
+      memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255724 R ada_getdivers_P_CSH_COH_CH_CH_CSOOOH_CH_CH_CCHO_CNHH.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.0           4         75% |[33m███████████████[0m-----| ([33mmedium[0m) 
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255725 R ada_getdivers_CH_CSOOOH_CH_CCHO_COH_CH_CNHH_CCHO_CNHH_CNOO.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255726 R ada_getdivers_N_CSH_CH_CH_B_CH_CCHO_CH_CPh_CSOOOH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255727 R ada_getdivers_CNHH_N_CH_COH_CH_P_CSH_CCHO_CH_CPh.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.3  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255728 C ada_getdivers_CH_CH_B_B_N_B_CH_CSH_S_B.com
+      memory        0.3 gb        2.0 gb    13% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.7  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255729 C ada_getdivers_CH_B_P_CH_O_CSOOOH_O_N_CH_B.com
+      memory        0.3 gb        2.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.0  h      100.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1255730 C ada_getdivers_CH_CPh_COH_CPh_CPh_COH_CH_CH_CNOO_N.com
+      memory        0.2 gb        2.0 gb    12% |[32m██[0m------------------| ([32mgood[0m)   
+       cores        0.8           4          -  |                    |          
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255731 R ada_getdivers_CSOOOH_CH_CH_CCHO_CSOOOH_CH_B_P_CH_B.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        3.9           4         98% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255732 R ada_getdivers_CNOO_CSOOOH_COH_CH_O_CSH_CH_CSOOOH_CH_B.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255733 C ada_getdivers_CNOO_CH_CH_CCHO_CH_CPh_CH_CH_N_CH.com
+      memory        0.3 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255734 R ada_getdivers_CNHH_CH_CNOO_CSOOOH_CH_B_CPh_CSOOOH_P_N.com
+      memory        0.4 gb        2.0 gb    21% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        0.8  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255735 C ada_getdivers_P_CH_CH_CCHO_S_CPh_S_CH_CCHO_S.com
+      memory        0.3 gb        2.0 gb    17% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255736 R ada_getdivers_P_CPh_CH_CPh_CNHH_B_CH_P_S_CH.com
+      memory        0.4 gb        2.0 gb    19% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.2  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255737 C ada_getdivers_CSOOOH_CNOO_CH_CH_CNHH_CH_CH_CH_CH_S.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255738 R ada_getdivers_B_CPh_CNOO_CH_CH_CH_CH_CPh_CCHO_COH.com
+      memory        0.4 gb        2.0 gb    22% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.0  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255739 C ada_getdivers_CH_B_CH_CH_CSOOOH_P_CNHH_CSH_CH_CCHO.com
+      memory        0.3 gb        2.0 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.4  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255740 R ada_getdivers_CPh_CPh_CH_CCHO_CSOOOH_CH_CH_CSOOOH_CSH_CH.com
+      memory        0.5 gb        2.0 gb    26% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255741 R ada_getdivers_CSOOOH_B_CCHO_CSH_CH_COH_CH_CH_CNOO_CSH.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+
+    walltime        1.5  h      100.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1255742 R ada_getdivers_N_CNHH_CSH_N_CH_CSOOOH_CH_B_CH_CPh.com
+      memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+

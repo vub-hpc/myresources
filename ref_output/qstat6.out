@@ -1,0 +1,10 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        -    h        0.0  h     -  |                    |              1257508[] C dice.pbs
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.0  h     -  |                    |              1257509[] R dice.pbs
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+

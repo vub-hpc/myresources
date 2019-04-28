@@ -1,0 +1,74 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        0.0  h       72.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254168 C gaus.com
+      memory        0.6 gb        1.4 gb    47% |[32m█████████[0m-----------| ([32mgood[0m)   
+       cores        1.9           2          -  |                    |          
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h       72.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254170 C gaus.com
+      memory        0.6 gb        1.4 gb    47% |[32m█████████[0m-----------| ([32mgood[0m)   
+       cores        1.7           2          -  |                    |          
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h       72.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254171 C gaus.com
+      memory        0.6 gb        1.4 gb    47% |[32m█████████[0m-----------| ([32mgood[0m)   
+       cores        1.9           2          -  |                    |          
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h       72.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254172 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.6           2          -  |                    |          
+
+    walltime        0.0  h       72.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254177 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.5           2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254179 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.7           2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254184 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.5           2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254187 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.5           2          -  |                    |          
+
+    walltime        -    h        1.0  h     -  |                    |                1254545 C gaus.com
+      memory        -   gb        1.4 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        0.0  h        1.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1254546 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.0           4          -  |                    |          
+
+    walltime        0.0  h        1.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1254549 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.0           4          -  |                    |          
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        -    h        1.0  h     -  |                    |                1254551 C gaus.com
+      memory        -   gb        1.4 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        -    h        1.0  h     -  |                    |                1254553 C gaus.com
+      memory        -   gb        1.4 gb     -  |                    |          
+       cores        -             2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254559 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.5           2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254560 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.4           2          -  |                    |          
+
+    walltime        0.0  h        1.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254564 C gaus.com
+      memory        0.2 gb        1.4 gb    16% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        1.5           2          -  |                    |          
+
+    walltime        -    h        1.0  h     -  |                    |                1254647 Q STDIN
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+

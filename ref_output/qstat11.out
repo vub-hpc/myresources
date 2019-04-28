@@ -1,0 +1,45 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        -    h        0.3  h     -  |                    |                1291208 C gaus.20171110_092845.AX
+      memory        -   gb       10.0 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        2.5  h       24.0  h    10% |[31m██[0m------------------| ([31mbad[0m)          1291934 C gaus
+      memory        0.4 gb       52.0 gb     1% |[31m[0m--------------------| ([31mbad[0m)    
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: only 0.4 gb of the requested 52.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.0  h        1.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1292014 C STDIN
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+Alert: job stopped with non-zero exit code (265).
+
+    walltime        2.6  h       24.0  h    11% |[31m██[0m------------------| ([31mbad[0m)          1292015 C gaus
+      memory        0.9 gb       52.0 gb     2% |[31m[0m--------------------| ([31mbad[0m)    
+       cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: only 0.9 gb of the requested 52.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.2  h       24.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1292218 C ivybridge-2node-8core
+      memory        4.2 gb       16.0 gb    26% |[32m█████[0m---------------| ([32mgood[0m)   
+       cores       15.5          16         97% |[32m███████████████████[0m-| ([32mgood[0m)   
+
+    walltime        -    h       24.0  h     -  |                    |                1292268 Q magnycours-2node-8core
+      memory        -   gb       16.0 gb     -  |                    |          
+       cores        -            16          -  |                    |          
+
+    walltime       10.4  h       24.0  h    43% |[31m█████████[0m-----------| ([31mbad[0m)          1292270 C gaus
+      memory       52.0 gb       52.0 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
+       cores       23.3          24         97% |[32m███████████████████[0m-| ([32mgood[0m)   
+Alert: memory close to the limit (100 %). If your job failed, request more memory.
+
+    walltime        -    h       24.0  h     -  |                    |                1292272 C gaus
+      memory        -   gb       52.0 gb     -  |                    |          
+       cores        -            24          -  |                    |          
+
+    walltime       10.3  h       24.0  h    43% |[34m█████████[0m-----------| ([34m-[0m)            1292338 R gaus
+      memory       52.0 gb       52.0 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
+       cores       23.2          24         97% |[32m███████████████████[0m-| ([32mgood[0m)   
+Alert: memory close to the limit (100 %). If your job failed, request more memory.
+

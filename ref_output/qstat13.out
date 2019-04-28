@@ -1,0 +1,10 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        0.0  h        0.1  h     1% |[31m[0m--------------------| ([31mbad[0m)          1430164 C mpi_openmpi_magnycours.pbs
+      memory        0.1 gb        1.0 gb    13% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        0.2           4          -  |                    |          
+
+    walltime        0.0  h        0.1  h     1% |[31m[0m--------------------| ([31mbad[0m)          1430166 C mpi_openmpi_nic36-nic38.pbs
+      memory        0.1 gb        1.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
+       cores        0.2           4          -  |                    |          
+

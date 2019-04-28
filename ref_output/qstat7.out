@@ -1,0 +1,114 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        0.0  h        0.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)       1257508[2] C dice.pbs-2
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        0.3           1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     2% |[31m[0m--------------------| ([31mbad[0m)       1257508[4] C dice.pbs-4
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     1% |[31m[0m--------------------| ([31mbad[0m)       1257508[6] C dice.pbs-6
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     2% |[31m[0m--------------------| ([31mbad[0m)       1257508[7] C dice.pbs-7
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     2% |[31m[0m--------------------| ([31mbad[0m)       1257508[8] C dice.pbs-8
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        0.5           1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     2% |[31m[0m--------------------| ([31mbad[0m)       1257508[9] C dice.pbs-9
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     2% |[31m[0m--------------------| ([31mbad[0m)      1257508[10] C dice.pbs-10
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257509[2] C dice.pbs-2
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257509[4] C dice.pbs-4
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)       1257509[6] C dice.pbs-6
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257509[7] C dice.pbs-7
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)       1257509[8] C dice.pbs-8
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257509[9] C dice.pbs-9
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)      1257509[10] C dice.pbs-10
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257510[2] C dice.pbs-2
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)       1257510[4] C dice.pbs-4
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257510[6] C dice.pbs-6
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)       1257510[7] C dice.pbs-7
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)       1257510[8] C dice.pbs-8
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h    10% |[31m██[0m------------------| ([31mbad[0m)       1257510[9] C dice.pbs-9
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h        0.0  h     9% |[31m██[0m------------------| ([31mbad[0m)      1257510[10] C dice.pbs-10
+      memory        0.0 gb        1.0 gb     2% |[32m[0m--------------------| ([32mgood[0m)   
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[2] R dice.pbs-2
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[4] R dice.pbs-4
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[6] R dice.pbs-6
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[7] R dice.pbs-7
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[8] R dice.pbs-8
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |             1257511[9] R dice.pbs-9
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        -    h        0.1  h     -  |                    |            1257511[10] R dice.pbs-10
+      memory        -   gb        1.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+

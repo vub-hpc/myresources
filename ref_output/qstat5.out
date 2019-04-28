@@ -1,0 +1,25 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime       53.5  h      336.0  h    16% |[34m███[0m-----------------| ([34m-[0m)            1254169 R _36t2c6f5nlodcm3000_8.com
+      memory       65.5 gb      120.0 gb    55% |[33m███████████[0m---------| ([33mmedium[0m) 
+       cores        4.0           8         50% |[31m██████████[0m----------| ([31mbad[0m)    
+Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+
+    walltime        -    h      160.0  h     -  |                    |                1255570 C bzbis.inp
+      memory        -   gb       39.1 gb     -  |                    |          
+       cores        -            16          -  |                    |          
+
+    walltime        1.2  h      160.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1257346 C bzbis.inp
+      memory      205.2 gb      240.0 gb    85% |[32m█████████████████[0m---| ([32mgood[0m)   
+       cores        6.6           8         82% |[33m████████████████[0m----| ([33mmedium[0m) 
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.6  h      160.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1257386 C bzbis.inp
+      memory      232.6 gb      280.0 gb    83% |[32m█████████████████[0m---| ([32mgood[0m)   
+       cores        7.8           8         98% |[32m████████████████████[0m| ([32mgood[0m)   
+Alert: job stopped with non-zero exit code (271).
+
+    walltime        0.5  h      160.0  h     0% |[34m[0m--------------------| ([34m-[0m)            1257443 R bzbis.inp
+      memory      167.0 gb      320.0 gb    52% |[33m██████████[0m----------| ([33mmedium[0m) 
+       cores        7.9           8         98% |[32m████████████████████[0m| ([32mgood[0m)   
+
