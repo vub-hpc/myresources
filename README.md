@@ -19,3 +19,11 @@ Install
     git clone https://github.com/sisc-hpc/myresources
     cd myresources
     ./setup.py install
+
+
+Example
+=======
+
+
+![alt text](share/example.png)
+
