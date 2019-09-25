@@ -132,7 +132,6 @@ def parse_xml(jobdata):
     """
     job = new_job()
     jobid = jobdata.find('Job_Id').text
-#     job['jobid'] = filter(str.isdigit, jobid)
     job['jobid'] = re.match(r'[0-9]*', jobid).group(0)
     job['jobname'] = jobdata.find('Job_Name').text
     job['state'] = jobdata.find('job_state').text  # ['Q', 'H', 'R', 'E', 'C']
