@@ -8,4 +8,4 @@ build/
 dist/
 *egg-info/
 *.sw[op]
-
+test_output/
