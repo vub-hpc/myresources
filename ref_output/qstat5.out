@@ -3,7 +3,7 @@
     walltime       53.5  h      336.0  h    16% |[34m███[0m-----------------| ([34m-[0m)            1254169 R _36t2c6f5nlodcm3000_8.com
       memory       65.5 gb      120.0 gb    55% |[33m███████████[0m---------| ([33mmedium[0m) 
        cores        4.0           8         50% |[31m██████████[0m----------| ([31mbad[0m)    
-Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        -    h      160.0  h     -  |                    |                1255570 C bzbis.inp
       memory        -   gb       39.1 gb     -  |                    |          

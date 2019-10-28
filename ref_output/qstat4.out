@@ -19,7 +19,7 @@
     walltime       21.0  h      100.0  h    21% |[34m████[0m----------------| ([34m-[0m)            1255173 R ada_elin_COH_COH_COH_CSOOOH_CSH_CPh_CSOOOH_CNOO_CSOOOH_CSH.com
       memory        0.7 gb        2.0 gb    38% |[32m████████[0m------------| ([32mgood[0m)   
        cores        1.0           8         12% |[31m██[0m------------------| ([31mbad[0m)    
-Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        2.1  h      100.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1255403 C ada_elin_CH_CCHO_CSOOOH_CSH_CPh_COH.com
       memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
@@ -28,7 +28,7 @@ Alert: only 1.0 of the requested 8 cores used. Please request less cores or make
     walltime        5.5  h      100.0  h     5% |[31m█[0m-------------------| ([31mbad[0m)          1255404 C ada_elin_CNHH_CCHO_CSOOOH_CSH_CPh_COH.com
       memory        0.4 gb        2.0 gb    20% |[32m████[0m----------------| ([32mgood[0m)   
        cores        2.0           4         50% |[31m██████████[0m----------| ([31mbad[0m)    
-Alert: only 2.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 2.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        2.7  h      100.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          1255405 C ada_elin_CNOO_CCHO_CSOOOH_CSH_CPh_COH.com
       memory        0.4 gb        2.0 gb    22% |[32m████[0m----------------| ([32mgood[0m)   
@@ -205,7 +205,7 @@ Alert: only 2.0 of the requested 4 cores used. Please request less cores or make
     walltime        3.2  h      100.0  h     3% |[34m█[0m-------------------| ([34m-[0m)            1255630 R ada_elin_CNOO_CNHH_CNHH_CPh.com
       memory        0.4 gb        2.0 gb    18% |[32m████[0m----------------| ([32mgood[0m)   
        cores        1.0           4         25% |[31m█████[0m---------------| ([31mbad[0m)    
-Alert: only 1.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 1.0 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        0.9  h      100.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1255631 C ada_elin_CNOO_CNHH_CNHH_CCHO.com
       memory        0.3 gb        2.0 gb    15% |[32m███[0m-----------------| ([32mgood[0m)   
