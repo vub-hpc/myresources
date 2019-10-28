@@ -33,6 +33,8 @@ myrsources script
 
 from __future__ import division, print_function
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
+import cStringIO
+import csv
 import datetime as dt
 import re
 from subprocess import Popen, PIPE, CalledProcessError
@@ -328,17 +330,20 @@ def usage_string(job):
     return '\n'.join(res_fullstrings[res] for res in RESLIST)
 
 def csv_string(job):
-    fulllist = [
+    full_list = [
         job['jobid'],
         job['state'],
         job['jobname'],
     ]
     for res in RESLIST:
-        fulllist.extend([
-            '%s' % job[res]['avail'] if job[res]['avail'] is not None else '',
-            '%s' % job[res]['used'] if job[res]['used'] is not None else '',
+        full_list.extend([
+            job[res]['avail'],
+            job[res]['used'],
         ])
-    return ','.join(fulllist)
+    csvstring = cStringIO.StringIO()
+    writer = csv.writer(csvstring)
+    writer.writerow(full_list)
+    return csvstring.getvalue().rstrip()
 
 def write_string(string):
     try:
