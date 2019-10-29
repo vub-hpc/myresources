@@ -99,20 +99,20 @@ Alert: job stopped with non-zero exit code (1).
       memory        4.0 gb        4.0 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
        cores        1.0           8         12% |[31m██[0m------------------| ([31mbad[0m)    
 Alert: memory close to the limit (100 %). If your job failed, request more memory.
-Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 Alert: job stopped with non-zero exit code (1).
 
     walltime        0.3  h        8.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)      1941326[17] C model_eval_boosting.pbs-17
       memory        4.0 gb        4.0 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
        cores        1.0           8         12% |[31m██[0m------------------| ([31mbad[0m)    
 Alert: memory close to the limit (100 %). If your job failed, request more memory.
-Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        0.3  h        8.0  h     4% |[31m█[0m-------------------| ([31mbad[0m)      1941350[24] C model_eval_boosting.pbs-24
       memory        4.0 gb        4.0 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
        cores        1.0           8         12% |[31m██[0m------------------| ([31mbad[0m)    
 Alert: memory close to the limit (100 %). If your job failed, request more memory.
-Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 1.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        0.0  h        8.0  h     0% |[31m[0m--------------------| ([31mbad[0m)       1941656[1] C model_eval.pbs-1
       memory        0.0 gb        1.0 gb     0% |[32m[0m--------------------| ([32mgood[0m)   

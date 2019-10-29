@@ -3,17 +3,17 @@
     walltime       58.2  h      120.0  h    49% |[34m██████████[0m----------| ([34m-[0m)            1623593 R sxisac2-Split_Dataset_2_4
       memory       34.8 gb      480.0 gb     7% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        1.0           1         99% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 34.8 gb of the requested 480.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 34.8 gb of the requested 480.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       32.6  h      120.0  h    27% |[34m█████[0m---------------| ([34m-[0m)            1623594 R sxisac2-Split_Dataset_3_4
       memory       34.7 gb      480.0 gb     7% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        1.0           1         98% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 34.7 gb of the requested 480.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 34.7 gb of the requested 480.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       30.7  h      120.0  h    26% |[34m█████[0m---------------| ([34m-[0m)            1623595 R sxisac2-Split_Dataset_4_4
       memory       34.7 gb      480.0 gb     7% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        1.0           1         98% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 34.7 gb of the requested 480.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 34.7 gb of the requested 480.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        -    h       96.0  h     -  |                    |                1627809 H sxisac2-Split_Dataset2_2_4
       memory        -   gb      500.0 gb     -  |                    |          
@@ -30,22 +30,22 @@ Alert: only 34.7 gb of the requested 480.0 gb memory used. Please request less m
     walltime        0.0  h       96.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1631007 C sxmeridien_fresh_Testrun
       memory        0.0 gb      500.0 gb     0% |[31m[0m--------------------| ([31mbad[0m)    
        cores       56.9         100          -  |                    |          
-Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        0.0  h       96.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1631009 C sxmeridien_fresh_Testrun
       memory        4.7 gb      500.0 gb     1% |[31m[0m--------------------| ([31mbad[0m)    
        cores       66.6         100          -  |                    |          
-Alert: only 4.7 gb of the requested 500.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.7 gb of the requested 500.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        0.0  h       96.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1631170 C sxmeridien_fresh_testrun
       memory        0.0 gb      500.0 gb     0% |[31m[0m--------------------| ([31mbad[0m)    
        cores       58.6         100          -  |                    |          
-Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        0.0  h       96.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1631171 C sxmeridien_fresh_testrun
       memory        0.0 gb      500.0 gb     0% |[31m[0m--------------------| ([31mbad[0m)    
        cores       64.4         100          -  |                    |          
-Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        0.0  h        1.0  h     4% |[31m█[0m-------------------| ([31mbad[0m)          1631435 C sxmeridien_fresh_testrun
       memory        0.1 gb        1.0 gb    14% |[32m███[0m-----------------| ([32mgood[0m)   
@@ -54,6 +54,6 @@ Alert: only 0.0 gb of the requested 500.0 gb memory used. Please request less me
     walltime        0.2  h        1.0  h    19% |[31m████[0m----------------| ([31mbad[0m)          1631499 C sxmeridien_fresh_testrun
       memory       82.3 gb      240.0 gb    34% |[31m███████[0m-------------| ([31mbad[0m)    
        cores       19.1          28         68% |[31m██████████████[0m------| ([31mbad[0m)    
-Alert: only 82.3 gb of the requested 240.0 gb memory used. Please request less memory to avoid waisting resources.
-Alert: only 19.1 of the requested 28 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 82.3 gb of the requested 240.0 gb memory used. Please request less memory to avoid wasting resources.
+Alert: only 19.1 of the requested 28 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 

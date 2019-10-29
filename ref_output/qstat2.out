@@ -15,8 +15,8 @@
     walltime        7.0  h      336.0  h     2% |[34m[0m--------------------| ([34m-[0m)            1254169 R _36t2c6f5nlodcm3000_8.com
       memory        8.3 gb      120.0 gb     7% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        4.0           8         50% |[31m██████████[0m----------| ([31mbad[0m)    
-Alert: only 8.3 gb of the requested 120.0 gb memory used. Please request less memory to avoid waisting resources.
-Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 8.3 gb of the requested 120.0 gb memory used. Please request less memory to avoid wasting resources.
+Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime        0.0  h      160.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1254176 C bzbis.inp
       memory      312.5 gb      312.5 gb   100% |[35m████████████████████[0m| ([35mdanger[0m) 
@@ -75,10 +75,10 @@ Alert: memory close to the limit (96 %). If your job failed, request more memory
     walltime        1.4  h      200.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1254614 R _26r1cb3lypbis.com
       memory        0.7 gb       25.0 gb     3% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 0.7 gb of the requested 25.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.7 gb of the requested 25.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime        1.2  h      200.0  h     1% |[34m[0m--------------------| ([34m-[0m)            1254617 R _26r1cb3lypnicstris.com
       memory        0.7 gb       18.0 gb     4% |[31m█[0m-------------------| ([31mbad[0m)    
        cores        4.0           4         99% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 0.7 gb of the requested 18.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.7 gb of the requested 18.0 gb memory used. Please request less memory to avoid wasting resources.
 

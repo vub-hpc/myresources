@@ -7,7 +7,7 @@
     walltime        2.5  h       24.0  h    10% |[31m██[0m------------------| ([31mbad[0m)          1291934 C gaus
       memory        0.4 gb       52.0 gb     1% |[31m[0m--------------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 0.4 gb of the requested 52.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.4 gb of the requested 52.0 gb memory used. Please request less memory to avoid wasting resources.
 Alert: job stopped with non-zero exit code (271).
 
     walltime        0.0  h        1.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1292014 C STDIN
@@ -18,7 +18,7 @@ Alert: job stopped with non-zero exit code (265).
     walltime        2.6  h       24.0  h    11% |[31m██[0m------------------| ([31mbad[0m)          1292015 C gaus
       memory        0.9 gb       52.0 gb     2% |[31m[0m--------------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 0.9 gb of the requested 52.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.9 gb of the requested 52.0 gb memory used. Please request less memory to avoid wasting resources.
 Alert: job stopped with non-zero exit code (271).
 
     walltime        0.2  h       24.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1292218 C ivybridge-2node-8core

@@ -30,8 +30,8 @@ Alert: memory close to the limit (96 %). If your job failed, request more memory
     walltime       33.5  h      336.0  h    10% |[34m██[0m------------------| ([34m-[0m)            1263340 R _36t2c6f5nlodcm3000_8.com
       memory        9.9 gb      120.0 gb     8% |[31m██[0m------------------| ([31mbad[0m)    
        cores        4.0           8         50% |[31m██████████[0m----------| ([31mbad[0m)    
-Alert: only 9.9 gb of the requested 120.0 gb memory used. Please request less memory to avoid waisting resources.
-Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 9.9 gb of the requested 120.0 gb memory used. Please request less memory to avoid wasting resources.
+Alert: only 4.0 of the requested 8 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 
     walltime       33.4  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263341 R _28R1M06tris.com
       memory       27.7 gb       30.0 gb    92% |[32m██████████████████[0m--| ([32mgood[0m)   
@@ -50,30 +50,30 @@ Alert: memory close to the limit (97 %). If your job failed, request more memory
     walltime       33.3  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263346 R t2cgc6f5deprotcb_3sp.com
       memory        4.8 gb       20.0 gb    24% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.8 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.8 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       33.3  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263347 R _36t2desub11cb_3sp.com
       memory        4.8 gb       20.0 gb    24% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.8 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.8 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       33.2  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263348 R _36t2cgsubdem06_3sp.com
       memory        4.6 gb       20.0 gb    23% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       31.9  h      200.0  h    16% |[31m███[0m-----------------| ([31mbad[0m)          1263349 C octadim06trissp.com
       memory        4.5 gb       20.0 gb    23% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.5 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.5 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       33.2  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263350 R _36t2desub11_3sp.com
       memory        4.6 gb       20.0 gb    23% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 
     walltime       33.2  h      200.0  h    17% |[34m███[0m-----------------| ([34m-[0m)            1263351 R _36t0subdem06bissp.com
       memory        4.6 gb       20.0 gb    23% |[31m█████[0m---------------| ([31mbad[0m)    
        cores        4.0           4        100% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 4.6 gb of the requested 20.0 gb memory used. Please request less memory to avoid wasting resources.
 

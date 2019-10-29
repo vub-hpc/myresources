@@ -33,6 +33,8 @@ myrsources script
 
 from __future__ import division, print_function
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
+import cStringIO
+import csv
 import datetime as dt
 import re
 from subprocess import Popen, PIPE, CalledProcessError
@@ -40,24 +42,24 @@ import sys
 import xml.etree.cElementTree as ET
 
 
-VERSION = 2.1
+VERSION = 2.2
 
 
 # globals
-reslist = ['walltime', 'mem', 'ncore']
-res_names = dict(zip(reslist, ['walltime', 'memory', 'cores']))
-mem_units = {'b': 1, 'kb': 2**10, 'mb': 2**20, 'gb': 2**30, 'tb': 2**40}
-time_units = {'s': 1, 'm': 60, 'h': 3600, 'd': 3600 * 24}
-units = dict(zip(reslist, ['h', 'gb', '']))
-# for_free = the amount of a given resource that we give 'for free': counted as used for the rating
-# the for_free value of 'mem' is per core
-for_free = dict(zip(reslist, [0.0, 2.0, 0.0]))
-levels = dict(zip(reslist, [(50, 75, 99), (50, 75, 95), (70, 85, 101)]))  # usage levels in %: (medium, good, danger)
-noalert = False
-nocolor = False
-waittime = 1.0 / 12  # do not show ncore usage before this time
-colorcode = {'good': 'green', 'medium': 'yellow', 'bad': 'red', '-': 'blue', 'danger': 'magenta'}
-fgcol = {
+RESLIST = ['walltime', 'mem', 'ncore']
+RES_NAMES = dict(zip(RESLIST, ['walltime', 'memory', 'cores']))
+MEM_UNITS = {'b': 1, 'kb': 2**10, 'mb': 2**20, 'gb': 2**30, 'tb': 2**40}
+TIME_UNITS = {'s': 1, 'm': 60, 'h': 3600, 'd': 3600 * 24}
+UNITS = dict(zip(RESLIST, ['h', 'gb', '']))
+# FOR_FREE = the amount of a given resource that we give 'for free': counted as used for the rating
+# the FOR_FREE value of 'mem' is per core
+FOR_FREE = dict(zip(RESLIST, [0.0, 2.0, 0.0]))
+LEVELS = dict(zip(RESLIST, [(50, 75, 99), (50, 75, 95), (70, 85, 101)]))  # usage levels in %: (medium, good, danger)
+NOALERT = False
+NOCOLOR = False
+WAITTIME = 1.0 / 12  # do not show ncore usage before this time
+COLORCODE = {'good': 'green', 'medium': 'yellow', 'bad': 'red', '-': 'blue', 'danger': 'magenta'}
+FGCOL = {  # foreground colors
     'green': u'\u001b[32m',
     'yellow': u'\u001b[33m',
     'red': u'\u001b[31m',
@@ -81,31 +83,31 @@ def run_cmd(cmd):
 
 def convert_mem(mem):
     """
-    convert memory string eg. '200mb' into a value in units of units['mem']
+    convert memory string eg. '200mb' into a value in units of UNITS['mem']
     """
     if mem is None:
         return None
     value, unit = re.split(r'(\d+)', mem)[1:]
     value = float(value)
     unit = unit.lower()
-    if unit not in mem_units.keys():
+    if unit not in MEM_UNITS.keys():
         sys.stderr.write(
-            'Error: memory unit %s not supported. Use one of %s instead.\n' % (unit, mem_units.keys())
+            'Error: memory unit %s not supported. Use one of %s instead.\n' % (unit, MEM_UNITS.keys())
         )
         sys.exit(1)
-    return (value * mem_units[unit]) / mem_units[units['mem']]
+    return (value * MEM_UNITS[unit]) / MEM_UNITS[UNITS['mem']]
 
 
 def convert_time(time):
     """
-    convert time string 'h:m:s' into a value in units of units['walltime']
+    convert time string 'h:m:s' into a value in units of UNITS['walltime']
     torque always reports time in the format hh:mm:ss
     """
     if time is None:
         return None
     h, m, s = [float(i) for i in time.split(':')]
-    seconds = h * time_units['h'] + m * time_units['m'] + s * time_units['s']
-    return seconds / time_units[units['walltime']]
+    seconds = h * TIME_UNITS['h'] + m * TIME_UNITS['m'] + s * TIME_UNITS['s']
+    return seconds / TIME_UNITS[UNITS['walltime']]
 
 
 def get_elem_text(tree, elemstr):
@@ -120,7 +122,7 @@ def get_elem_text(tree, elemstr):
 def new_job():
     """ generate a new job dictionary with all values = None """
     job = dict.fromkeys(['jobid', 'jobname', 'state', 'queue', 'exit_status', 'ppn', 'nodes', 'cput'])
-    for res in reslist:
+    for res in RESLIST:
         job[res] = dict.fromkeys(['avail', 'used', 'usage', 'usage_for_free'])
     return job
 
@@ -186,15 +188,15 @@ def parse_xml(jobdata):
 def calc_usage(job):
     """ calculate resource usage """
 
-    for res in reslist:
+    for res in RESLIST:
         if None not in (job[res]['avail'], job[res]['used']):
             usage = 100.0 * job[res]['used'] / job[res]['avail']
             job[res]['usage'] = round(usage)
-            # do not show ncore usage if used walltime < waittime
+            # do not show ncore usage if used walltime < WAITTIME
             # None is smaller than any number
-            if res == 'ncore' and job['walltime']['used'] < waittime:
+            if res == 'ncore' and job['walltime']['used'] < WAITTIME:
                 job[res]['usage'] = None
-            job[res]['usage_for_free'] = 100.0 * for_free[res] / job[res]['avail']
+            job[res]['usage_for_free'] = 100.0 * FOR_FREE[res] / job[res]['avail']
             if res == 'mem':
                 job[res]['usage_for_free'] *= job['ncore']['avail']
 
@@ -244,8 +246,8 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
         fgcolor = ''
         fgreset = ''
     else:
-        fgcolor = fgcol[colorcode[rating]]
-        fgreset = fgcol['reset']
+        fgcolor = FGCOL[COLORCODE[rating]]
+        fgreset = FGCOL['reset']
 
     # calculate bar lengths
     usedlen = int(round(maxlen * usage / 100.0))
@@ -278,16 +280,16 @@ def usage_string(job):
         job['state'],
         job['jobname'],
     ])
-    res_extrastrings = dict(zip(reslist, [jobstr, '', '']))
-    fresource = dict(zip(reslist, [
+    res_extrastrings = dict(zip(RESLIST, [jobstr, '', '']))
+    fresource = dict(zip(RESLIST, [
         {'avail': '%10.1f', 'used': '%10.1f'},
         {'avail': '%10.1f', 'used': '%10.1f'},
         {'avail': '%s  ', 'used': '%10.1f'},
     ]))
 
-    res_fullstrings = dict.fromkeys(reslist, '')
+    res_fullstrings = dict.fromkeys(RESLIST, '')
 
-    for res in reslist:
+    for res in RESLIST:
         empty_bar = False
         show_rating = True
         usage_for_free = job[res]['usage_for_free']
@@ -309,24 +311,39 @@ def usage_string(job):
             job[res]['usage'],
             usage_for_free=usage_for_free,
             empty_bar=empty_bar,
-            nocol=nocolor,
+            nocol=NOCOLOR,
             show_rating=show_rating,
-            lev=levels[res],
+            lev=LEVELS[res],
         )
 
         res_fullstrings[res] = ' '.join([
-            res_names[res].rjust(12),
+            RES_NAMES[res].rjust(12),
             a_ustr['used'].rjust(10),
-            units[res].rjust(2),
+            UNITS[res].rjust(2),
             a_ustr['avail'].rjust(10),
-            units[res].rjust(2),
+            UNITS[res].rjust(2),
             usagestr.rjust(6),
             ubar.rjust(31),
             res_extrastrings[res],
         ])
 
-    return '\n'.join(res_fullstrings[res] for res in reslist)
+    return '\n'.join(res_fullstrings[res] for res in RESLIST)
 
+def csv_string(job):
+    full_list = [
+        job['jobid'],
+        job['state'],
+        job['jobname'],
+    ]
+    for res in RESLIST:
+        full_list.extend([
+            job[res]['avail'],
+            job[res]['used'],
+        ])
+    csvstring = cStringIO.StringIO()
+    writer = csv.writer(csvstring)
+    writer.writerow(full_list)
+    return csvstring.getvalue().rstrip()
 
 def write_string(string):
     try:
@@ -337,18 +354,18 @@ def write_string(string):
 
 
 def alert_mem(job):
-    if job['mem']['usage'] > levels['mem'][2]:
+    if job['mem']['usage'] > LEVELS['mem'][2]:
         alert = ('Alert: memory close to the limit (%.0f %%). '
                  'If your job failed, request more memory.' % job['mem']['usage'])
         print(alert)
-    if max(job['mem']['usage'], job['mem']['usage_for_free']) < levels['mem'][0]:
+    if max(job['mem']['usage'], job['mem']['usage_for_free']) < LEVELS['mem'][0]:
         alert = ('Alert: only %.1f gb of the requested %.1f gb memory used. '
-                 'Please request less memory to avoid waisting resources.' % (job['mem']['used'], job['mem']['avail']))
+                 'Please request less memory to avoid wasting resources.' % (job['mem']['used'], job['mem']['avail']))
         print(alert)
 
 
 def alert_walltime(job):
-    if job['walltime']['usage'] > levels['walltime'][2]:
+    if job['walltime']['usage'] > LEVELS['walltime'][2]:
         alert = ('Alert: walltime close to the limit (%.0f %%). '
                  'If your job failed, request more walltime.' % job['walltime']['usage'])
         print(alert)
@@ -357,9 +374,9 @@ def alert_walltime(job):
 def alert_ncore(job):
     if job['ncore']['usage'] is None:
         return
-    if job['ncore']['avail'] > 1 and job['ncore']['usage'] + job['ncore']['usage_for_free'] < levels['ncore'][0]:
+    if job['ncore']['avail'] > 1 and job['ncore']['usage'] + job['ncore']['usage_for_free'] < LEVELS['ncore'][0]:
         alert = ('Alert: only %.1f of the requested %d cores used. '
-                 'Please request less cores or make sure your program uses all cores to avoid waisting resources.' %
+                 'Please request less cores or make sure your program uses all cores to avoid wasting resources.' %
                  (job['ncore']['used'], job['ncore']['avail']))
         print(alert)
 
@@ -385,6 +402,11 @@ def write_header():
     print(fstring % ('--------', '----', '---------', '-----', ' ', '-----', '-', '-------'))
 
 
+def write_header_csv():
+    print(','.join(['jobID', 'state', 'jobname',
+        'walltime_avail', 'walltime_used', 'mem_avail', 'mem_used', 'ncore_avail', 'ncore_used']))
+
+
 def demo_usage_bar():
     for i in range(10, 101, 10):
         print(usage_bar(i, show_rating=False))
@@ -408,7 +430,7 @@ def demo_myresources():
         ustring = usage_string(job)
         write_string(ustring)
 
-        if not noalert:
+        if not NOALERT:
             write_alerts(job)
         print('')
 
@@ -429,7 +451,7 @@ Resources:
 Color codes corresponding to ratings:
  -green:      good
  -yellow:     medium
- -red:        bad - waisting resources
+ -red:        bad - wasting resources
  -magenta:    danger - close to the limit
  -blue:       no rating
         """,
@@ -439,6 +461,7 @@ Color codes corresponding to ratings:
     parser.add_argument('-a', '--noalert', dest='noalert', help='do not show alert messages', action='store_true')
     parser.add_argument('-f', '--infile', dest='infile', help="xml file (output of 'qstat -xt')")
     parser.add_argument('-c', '--nocolor', dest='nocolor', help='do not use colors in the output', action='store_true')
+    parser.add_argument('--csv', dest='csv', help='print as csv', action='store_true')
     parser.add_argument(
         '-s', '--state', dest='state',
         help='show only jobs with given state(s) as comma-separated list: "Q,H,R,E,C" (default: show all)')
@@ -458,13 +481,13 @@ Color codes corresponding to ratings:
             except ValueError:
                 raise ValueError('%s is not a valid jobID' % i)
 
-    global noalert
+    global NOALERT
     if args.noalert:
-        noalert = True
+        NOALERT = True
 
-    global nocolor
+    global NOCOLOR
     if args.nocolor:
-        nocolor = True
+        NOCOLOR = True
 
     if args.demo:
         demo_myresources()
@@ -484,7 +507,10 @@ Color codes corresponding to ratings:
     if not root:
         sys.exit()
 
-    write_header()
+    if args.csv:
+        write_header_csv()
+    else:
+        write_header()
 
     for jobdata in root:
         job = parse_xml(jobdata)
@@ -497,13 +523,15 @@ Color codes corresponding to ratings:
                 continue
 
         job = calc_usage(job)
-        ustring = usage_string(job)
-        write_string(ustring)
-
-        if not noalert:
-            write_alerts(job)
-
-        print('')
+        if args.csv:
+            csvstring = csv_string(job)
+            write_string(csvstring)
+        else:
+            ustring = usage_string(job)
+            write_string(ustring)
+            if not NOALERT:
+                write_alerts(job)
+            print('')
 
 
 if __name__ == '__main__':

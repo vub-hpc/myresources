@@ -23,20 +23,20 @@
     walltime        0.5  h       20.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1690008 C run1
       memory       29.2 gb      340.0 gb     9% |[31m██[0m------------------| ([31mbad[0m)    
        cores       39.2          40         98% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 29.2 gb of the requested 340.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 29.2 gb of the requested 340.0 gb memory used. Please request less memory to avoid wasting resources.
 Alert: job stopped with non-zero exit code (271).
 
     walltime        0.4  h       20.0  h     2% |[31m[0m--------------------| ([31mbad[0m)          1690054 C run1
       memory       20.1 gb      340.0 gb     6% |[31m█[0m-------------------| ([31mbad[0m)    
        cores       19.7          40         49% |[31m██████████[0m----------| ([31mbad[0m)    
-Alert: only 20.1 gb of the requested 340.0 gb memory used. Please request less memory to avoid waisting resources.
-Alert: only 19.7 of the requested 40 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 20.1 gb of the requested 340.0 gb memory used. Please request less memory to avoid wasting resources.
+Alert: only 19.7 of the requested 40 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 Alert: job stopped with non-zero exit code (271).
 
     walltime        0.3  h       20.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          1690085 C run1
       memory       38.6 gb      170.0 gb    23% |[31m█████[0m---------------| ([31mbad[0m)    
        cores       39.3          40         98% |[32m████████████████████[0m| ([32mgood[0m)   
-Alert: only 38.6 gb of the requested 170.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 38.6 gb of the requested 170.0 gb memory used. Please request less memory to avoid wasting resources.
 Alert: job stopped with non-zero exit code (271).
 
     walltime        -    h       20.0  h     -  |                    |                1690097 C run1
@@ -46,7 +46,7 @@ Alert: job stopped with non-zero exit code (271).
     walltime        0.0  h       20.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          1690106 C run1
       memory        0.0 gb     3400.0 gb     0% |[31m[0m--------------------| ([31mbad[0m)    
        cores        0.1          40          -  |                    |          
-Alert: only 0.0 gb of the requested 3400.0 gb memory used. Please request less memory to avoid waisting resources.
+Alert: only 0.0 gb of the requested 3400.0 gb memory used. Please request less memory to avoid wasting resources.
 Alert: job stopped with non-zero exit code (1).
 
     walltime        -    h       20.0  h     -  |                    |                1690187 C run1
@@ -56,7 +56,7 @@ Alert: job stopped with non-zero exit code (1).
     walltime        0.8  h       20.0  h     4% |[31m█[0m-------------------| ([31mbad[0m)          1690189 C run1
       memory        9.8 gb      680.0 gb     1% |[31m[0m--------------------| ([31mbad[0m)    
        cores        9.9          40         25% |[31m█████[0m---------------| ([31mbad[0m)    
-Alert: only 9.8 gb of the requested 680.0 gb memory used. Please request less memory to avoid waisting resources.
-Alert: only 9.9 of the requested 40 cores used. Please request less cores or make sure your program uses all cores to avoid waisting resources.
+Alert: only 9.8 gb of the requested 680.0 gb memory used. Please request less memory to avoid wasting resources.
+Alert: only 9.9 of the requested 40 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
 Alert: job stopped with non-zero exit code (1).
 
