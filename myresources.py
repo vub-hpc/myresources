@@ -42,7 +42,7 @@ import sys
 import xml.etree.cElementTree as ET
 
 
-VERSION = 2.2
+VERSION = 2.3
 
 
 # globals
@@ -165,9 +165,14 @@ def parse_xml(jobdata):
         job['ncore']['avail'] = 0
         ppn_list = nodes_list = [1]
         # parse all possible ways nodes and cores can be requested
-        # examples: [1:ppn=8+1:ppn=8] [nic66:ppn=5+nic67:ppn=5] [1:ppn=8:enc8+1:ppn=8:enc8] [1:4]
+        # examples: '1:ppn=8+1:ppn=8' 'nic66:ppn=5+nic67:ppn=5' '1:ppn=8:enc8+1:ppn=8:enc8' '1:4' '1'
         for nodecore in job['nodes'].split('+'):
-            node, core = nodecore.split(':')[:2]
+            nodecore = nodecore.split(':')
+            node = nodecore[0]
+            try:
+                core = nodecore[1]
+            except IndexError:
+                core = '1'
             try:
                 nnode = int(node)
             except ValueError:
