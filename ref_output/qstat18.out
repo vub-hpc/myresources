@@ -1,0 +1,65 @@
+    resource          used     requested  usage                                         jobID S jobname
+    --------          ----     ---------  -----                                         ----- - -------
+    walltime        -    h       24.0  h     -  |                    |                2602144 C 9261
+      memory        -   gb       16.0 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        -    h       24.0  h     -  |                    |                2602148 C 9261
+      memory        -   gb       16.0 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        0.2  h       24.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          2602152 C 9261
+      memory        0.4 gb       16.0 gb     3% |[33m█[0m-------------------| ([33mmedium[0m) 
+       cores        0.8           4         20% |[31m████[0m----------------| ([31mbad[0m)    
+Alert: only 0.8 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2602179 C 9237
+      memory        0.1 gb       16.0 gb     0% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.7           4          -  |                    |          
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2602333 C 9237
+      memory        0.0 gb       16.0 gb     0% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.7           4          -  |                    |          
+
+    walltime        0.2  h       24.0  h     1% |[31m[0m--------------------| ([31mbad[0m)          2602346 C 9267
+      memory        3.8 gb       16.0 gb    24% |[33m█████[0m---------------| ([33mmedium[0m) 
+       cores        1.3           4         31% |[31m██████[0m--------------| ([31mbad[0m)    
+Alert: only 1.3 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
+
+    walltime        -    h       24.0  h     -  |                    |                2602351 C STDIN
+      memory        -   gb      256.0 gb     -  |                    |          
+       cores        -             1          -  |                    |          
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2602364 C 9237
+      memory        0.1 gb       16.0 gb     1% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.9           4          -  |                    |          
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2602368 C 9265
+      memory        0.0 gb       16.0 gb     0% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.9           4          -  |                    |          
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2604581 C 9264
+      memory        0.2 gb       16.0 gb     1% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        1.2           4          -  |                    |          
+
+    walltime        -    h       24.0  h     -  |                    |                2604589 C 9264
+      memory        -   gb       16.0 gb     -  |                    |          
+       cores        -             4          -  |                    |          
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2604591 C 9268
+      memory        0.0 gb       16.0 gb     0% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.4           4          -  |                    |          
+
+    walltime        0.7  h       24.0  h     3% |[31m█[0m-------------------| ([31mbad[0m)          2606908 C 9266
+      memory        2.5 gb       16.0 gb    16% |[33m███[0m-----------------| ([33mmedium[0m) 
+       cores        1.6           4         39% |[31m████████[0m------------| ([31mbad[0m)    
+Alert: only 1.6 of the requested 4 cores used. Please request less cores or make sure your program uses all cores to avoid wasting resources.
+
+    walltime        0.0  h       24.0  h     0% |[31m[0m--------------------| ([31mbad[0m)          2606915 C 9270
+      memory        0.0 gb       16.0 gb     0% |[33m[0m--------------------| ([33mmedium[0m) 
+       cores        0.6           4          -  |                    |          
+
+    walltime        2.2  h       24.0  h     9% |[34m██[0m------------------| ([34m-[0m)            2606924 R 9230
+      memory        3.3 gb       16.0 gb    21% |[33m████[0m----------------| ([33mmedium[0m) 
+       cores        3.7           4         94% |[32m███████████████████[0m-| ([32mgood[0m)   
+

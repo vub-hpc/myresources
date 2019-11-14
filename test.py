@@ -65,7 +65,7 @@ class Testing(unittest.TestCase):
         testdir = 'test_output'
         mkdir_p(testdir)
 
-        for i in range(1, 18):
+        for i in range(1, 19):
             ref_out = read_file('%s/qstat%s.out' % (refdir, i))
             out = run_cmd('./myresources -f qstat_xml/qstat%s.xml' % i)
             write_file('%s/qstat%s.out' % (testdir, i), out)
