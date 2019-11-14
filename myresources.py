@@ -42,7 +42,7 @@ import sys
 import xml.etree.cElementTree as ET
 
 
-VERSION = 2.2
+VERSION = 2.3
 
 
 # globals
