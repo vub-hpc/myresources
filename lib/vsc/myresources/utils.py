@@ -26,10 +26,13 @@
 Utilities for myresources
 """
 from __future__ import division, print_function
-from io import StringIO
 import csv
 import re
 import sys
+try:
+    from StringIO import StringIO  # Python 2
+except ImportError:
+    from io import StringIO  # Python 3
 
 from vsc.myresources.constants import (
     RESLIST, RES_NAMES, MEM_UNITS, TIME_UNITS, UNITS, FOR_FREE,

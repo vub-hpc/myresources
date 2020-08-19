@@ -33,10 +33,14 @@ from __future__ import print_function
 import errno
 import os
 import sys
-import xml.etree.cElementTree as ET
-from unittest import skip
-from vsc.install.testing import TestCase
+try:
+    from StringIO import StringIO  # Python 2
+except ImportError:
+    from io import StringIO  # Python 3
 
+import xml.etree.cElementTree as ET
+
+from vsc.install.testing import TestCase
 from vsc.myresources.utils import (
     write_header, write_alerts, write_string,
     calc_usage, parse_xml, usage_string
@@ -83,8 +87,6 @@ def dummy_main(inputfile):
 
 class Testing(TestCase):
     def test_qstat_xml_files(self):
-        ref_outlist = []
-        outlist = []
         refdir = 'ref_output'
         testdir = 'test_output'
         test_dir = os.path.dirname(os.path.abspath(__file__))
@@ -93,13 +95,8 @@ class Testing(TestCase):
 
         for i in range(1, 19):
             ref_out = read_file(os.path.join(test_dir, '%s/qstat%s.out' % (refdir, i)))
-            out_file = os.path.join(test_dir, '%s/qstat%s.out' % (testdir, i))
-            # todo: just put this in a variable instead of file?
-            sys.stdout = open(out_file, 'w')
+            output = StringIO()
+            sys.stdout = output
             dummy_main(os.path.join(test_dir, 'qstat_xml/qstat%s.xml' % i))
-            sys.stdout.close()
             sys.stdout = stdout_orig
-            ref_outlist.append(ref_out)
-            outlist.append(read_file(out_file))
-
-        self.assertEqual(outlist, ref_outlist)
+            self.assertEqual(ref_out, output.getvalue(), "test %d failed" % i)
