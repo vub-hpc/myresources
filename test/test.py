@@ -1,7 +1,6 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Copyright 2017-2019 Vrije Universiteit Brussel
+# Copyright 2017-2020 Vrije Universiteit Brussel
 #
 # This file is part of myresources,
 # originally created by the HPC team of Vrije Universiteit Brussel (https://hpc.vub.be),
@@ -13,17 +12,16 @@
 # https://github.com/sisc-hpc/myresources
 #
 # myresources is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Library General Public License as
-# published by the Free Software Foundation, either version 2 of
-# the License, or (at your option) any later version.
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation v2.
 #
 # myresources is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU Library General Public License for more details.
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 #
-# You should have received a copy of the GNU Library General Public License
-# along with myresources. If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License
+# along with myresources.  If not, see <http://www.gnu.org/licenses/>.
 #
 """
 test script
@@ -35,7 +33,9 @@ from __future__ import print_function
 import errno
 from myresources import *
 import os
-import unittest
+from unittest import skip
+from vsc.install.testing import TestCase
+
 
 
 def read_file(filename):
@@ -57,7 +57,8 @@ def mkdir_p(path):
     else: raise
 
 
-class Testing(unittest.TestCase):
+class Testing(TestCase):
+    @skip("no yet")
     def test_qstat_xml_files(self):
         ref_outlist = []
         outlist = []
@@ -73,7 +74,3 @@ class Testing(unittest.TestCase):
             outlist.append(out)
 
         self.assertEqual(outlist, ref_outlist)
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -1,7 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 #
-# Copyright 2017-2019 Vrije Universiteit Brussel
+# Copyright 2020-2020 Vrije Universiteit Brussel
 #
 # This file is part of myresources,
 # originally created by the HPC team of Vrije Universiteit Brussel (https://hpc.vub.be),
@@ -13,72 +11,30 @@
 # https://github.com/sisc-hpc/myresources
 #
 # myresources is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Library General Public License as
-# published by the Free Software Foundation, either version 2 of
-# the License, or (at your option) any later version.
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation v2.
 #
 # myresources is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU Library General Public License for more details.
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 #
-# You should have received a copy of the GNU Library General Public License
-# along with myresources. If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License
+# along with myresources.  If not, see <http://www.gnu.org/licenses/>.
 #
 """
-myrsources script
-
-@author: Samuel Moors, Vrije Universiteit Brussel (VUB)
+Utilities for myresources
 """
-
 from __future__ import division, print_function
-from argparse import ArgumentParser, RawDescriptionHelpFormatter
-import cStringIO
+from io import StringIO
 import csv
-import datetime as dt
 import re
-from subprocess import Popen, PIPE, CalledProcessError
 import sys
-import xml.etree.cElementTree as ET
 
-
-VERSION = 2.3
-
-
-# globals
-RESLIST = ['walltime', 'mem', 'ncore']
-RES_NAMES = dict(zip(RESLIST, ['walltime', 'memory', 'cores']))
-MEM_UNITS = {'b': 1, 'kb': 2**10, 'mb': 2**20, 'gb': 2**30, 'tb': 2**40}
-TIME_UNITS = {'s': 1, 'm': 60, 'h': 3600, 'd': 3600 * 24}
-UNITS = dict(zip(RESLIST, ['h', 'gb', '']))
-# FOR_FREE = the amount of a given resource that we give 'for free': counted as used for the rating
-# the FOR_FREE value of 'mem' is per core
-FOR_FREE = dict(zip(RESLIST, [0.0, 2.0, 0.0]))
-LEVELS = dict(zip(RESLIST, [(50, 75, 99), (50, 75, 95), (70, 85, 101)]))  # usage levels in %: (medium, good, danger)
-NOALERT = False
-NOCOLOR = False
-WAITTIME = 1.0 / 12  # do not show ncore usage before this time
-COLORCODE = {'good': 'green', 'medium': 'yellow', 'bad': 'red', '-': 'blue', 'danger': 'magenta'}
-FGCOL = {  # foreground colors
-    'green': u'\u001b[32m',
-    'yellow': u'\u001b[33m',
-    'red': u'\u001b[31m',
-    'blue': u'\u001b[34m',
-    'magenta': u'\u001b[35m',
-    'reset': u'\u001b[0m',
-}
-
-
-def run_cmd(cmd):
-    """ execute a shell command and return the stdout output """
-    cmdlist = cmd.split()
-#     p = Popen(' '.join(cmdlist), stdout=PIPE, stderr=PIPE, shell=True)
-    p = Popen(cmdlist, stdout=PIPE, stderr=PIPE)
-    (out, err) = p.communicate()
-    if err:
-        sys.stderr.write('Error: failed to execute command "%s" (%s)\n' % (cmd, err))
-        sys.exit(1)
-    return out
+from vsc.myresources.constants import (
+    RESLIST, RES_NAMES, MEM_UNITS, TIME_UNITS, UNITS, FOR_FREE,
+    LEVELS, WAITTIME, COLORCODE, FGCOL
+)
 
 
 def convert_mem(mem):
@@ -115,8 +71,8 @@ def get_elem_text(tree, elemstr):
     elem = tree.find(elemstr)
     if elem is not None:
         return elem.text
-    else:
-        return None
+
+    return None
 
 
 def new_job():
@@ -208,7 +164,7 @@ def calc_usage(job):
     return job
 
 
-def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, empty_bar=False, maxlen=20, nocol=False):
+def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, empty_bar=False, maxlen=20, color=True):
     """
     generate a color bar (string) showing resource usage and rating with color code: good/medium/bad
     arguments:
@@ -247,12 +203,12 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
     unusedchar = '-'
     usedchar = u'\u2588'  # closed block
 
-    if nocol:
-        fgcolor = ''
-        fgreset = ''
-    else:
+    if color:
         fgcolor = FGCOL[COLORCODE[rating]]
         fgreset = FGCOL['reset']
+    else:
+        fgcolor = ''
+        fgreset = ''
 
     # calculate bar lengths
     usedlen = int(round(maxlen * usage / 100.0))
@@ -262,7 +218,7 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
     usedstr = usedchar * usedlen
     unusedstr = unusedchar * unusedlen
 
-    bar = '|%s%s%s%s| (%s%s%s)' % (
+    bar_output = '|%s%s%s%s| (%s%s%s)' % (
         fgcolor,
         usedstr,
         fgreset,
@@ -271,13 +227,13 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
         rating,
         fgreset,
     )
-    bar = bar.ljust(49)
-    if nocol:
-        bar = bar[:31]
-    return bar.encode('utf-8')
+    bar_output = bar_output.ljust(49)
+    if not color:
+        bar_output = bar_output[:31]
+    return bar_output
 
 
-def usage_string(job):
+def usage_string(job, color=True):
     """ write memory, walltime, and ncore usage to stdout """
 
     jobstr = ' '.join([
@@ -316,7 +272,7 @@ def usage_string(job):
             job[res]['usage'],
             usage_for_free=usage_for_free,
             empty_bar=empty_bar,
-            nocol=NOCOLOR,
+            color=color,
             show_rating=show_rating,
             lev=LEVELS[res],
         )
@@ -334,6 +290,7 @@ def usage_string(job):
 
     return '\n'.join(res_fullstrings[res] for res in RESLIST)
 
+
 def csv_string(job):
     full_list = [
         job['jobid'],
@@ -345,10 +302,11 @@ def csv_string(job):
             job[res]['avail'],
             job[res]['used'],
         ])
-    csvstring = cStringIO.StringIO()
+    csvstring = StringIO()
     writer = csv.writer(csvstring)
     writer.writerow(full_list)
     return csvstring.getvalue().rstrip()
+
 
 def write_string(string):
     try:
@@ -409,150 +367,4 @@ def write_header():
 
 def write_header_csv():
     print(','.join(['jobID', 'state', 'jobname',
-        'walltime_avail', 'walltime_used', 'mem_avail', 'mem_used', 'ncore_avail', 'ncore_used']))
-
-
-def demo_usage_bar():
-    for i in range(10, 101, 10):
-        print(usage_bar(i, show_rating=False))
-        print(usage_bar(i))
-
-
-def demo_myresources():
-    write_header()
-    for i in range(1, 5):
-        job = new_job()
-        job.update({
-            'jobid': str(i + 100000),
-            'jobname': 'my_super_job%s' % i,
-            'state': 'C',
-        })
-        job['mem'].update({'avail': 20, 'used': i * 5})
-        job['walltime'].update({'avail': 16, 'used': i * 4})
-        job['ncore'].update({'avail': 4, 'used': i})
-
-        job = calc_usage(job)
-        ustring = usage_string(job)
-        write_string(ustring)
-
-        if not NOALERT:
-            write_alerts(job)
-        print('')
-
-
-def main():
-    """ main function """
-
-    parser = ArgumentParser(
-        description="""
-Calculate job resource usage for running or recently finished jobs
-This script can be used to check if requested resources are/were used optimally.
-
-Resources:
- -memory:     random access memory
- -walltime:   wall-clock time
- -cores:      number of CPU cores are doing actual work
-
-Color codes corresponding to ratings:
- -green:      good
- -yellow:     medium
- -red:        bad - wasting resources
- -magenta:    danger - close to the limit
- -blue:       no rating
-        """,
-        formatter_class=RawDescriptionHelpFormatter,
-    )
-    parser.add_argument('jobid', help='show only resources for given jobID(s) (default: show all)', nargs='*')
-    parser.add_argument('-a', '--noalert', dest='noalert', help='do not show alert messages', action='store_true')
-    parser.add_argument('-f', '--infile', dest='infile', help="xml file (output of 'qstat -xt')")
-    parser.add_argument('-c', '--nocolor', dest='nocolor', help='do not use colors in the output', action='store_true')
-    parser.add_argument('--csv', dest='csv', help='print as csv', action='store_true')
-    parser.add_argument(
-        '-s', '--state', dest='state',
-        help='show only jobs with given state(s) as comma-separated list: "Q,H,R,E,C" (default: show all)')
-    parser.add_argument('-d', '--demo', dest='demo', help='show demo output and exit', action='store_true')
-    parser.add_argument('-v', '--version', dest='version', help='show version and exit', action='store_true')
-
-    args = parser.parse_args()
-
-    if args.version:
-        print('version: %s' % VERSION)
-        sys.exit()
-
-    if args.jobid:
-        for i in args.jobid:
-            try:
-                int(i)
-            except ValueError:
-                raise ValueError('%s is not a valid jobID' % i)
-
-    global NOALERT
-    if args.noalert:
-        NOALERT = True
-
-    global NOCOLOR
-    if args.nocolor:
-        NOCOLOR = True
-
-    if args.demo:
-        demo_myresources()
-        sys.exit()
-
-    if args.infile:
-        try:
-            tree = ET.parse(args.infile)
-        except (IOError, ET.ParseError):
-            print('Error parsing xml file: %s' % args.infile)
-            sys.exit()
-    else:
-        xmlstring = run_cmd('qstat -xt')
-        tree = ET.ElementTree(ET.fromstring(xmlstring))
-
-    root = tree.getroot()
-    if not root:
-        sys.exit()
-
-    if args.csv:
-        write_header_csv()
-    else:
-        write_header()
-
-    for jobdata in root:
-        job = parse_xml(jobdata)
-        if args.jobid:
-            if job['jobid'] not in args.jobid:
-                continue
-        if args.state:
-            states = args.state.split(',')
-            if job['state'] not in states:
-                continue
-
-        job = calc_usage(job)
-        if args.csv:
-            csvstring = csv_string(job)
-            write_string(csvstring)
-        else:
-            ustring = usage_string(job)
-            write_string(ustring)
-            if not NOALERT:
-                write_alerts(job)
-            print('')
-
-
-if __name__ == '__main__':
-    main()
-    """
-    suppress the following error when piping the output:
-        close failed in file object destructor:
-        sys.excepthook is missing
-        lost sys.stderr
-    """
-    try:
-        sys.stdout.close()
-    except IOError:
-        pass
-    try:
-        sys.stderr.close()
-    except IOError:
-        pass
-    sys.exit()
+                    'walltime_avail', 'walltime_used', 'mem_avail', 'mem_used', 'ncore_avail', 'ncore_used']))
