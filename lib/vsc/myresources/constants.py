@@ -28,24 +28,22 @@ a bunch of constants
 VERSION = 3.0
 
 # globals
-RESLIST = ['walltime', 'mem', 'ncore']
-RES_NAMES = dict(zip(RESLIST, ['walltime', 'memory', 'cores']))
-MEM_UNITS = {'b': 1, 'kb': 2**10, 'mb': 2**20, 'gb': 2**30, 'tb': 2**40}
-TIME_UNITS = {'s': 1, 'm': 60, 'h': 3600, 'd': 3600 * 24}
-UNITS = dict(zip(RESLIST, ['h', 'gb', '']))
+RESLIST = ["walltime", "mem", "ncore"]
+RES_NAMES = dict(zip(RESLIST, ["walltime", "memory", "cores"]))
+MEM_UNITS = {"b": 1, "kb": 2 ** 10, "mb": 2 ** 20, "gb": 2 ** 30, "tb": 2 ** 40}
+TIME_UNITS = {"s": 1, "m": 60, "h": 3600, "d": 3600 * 24}
+UNITS = dict(zip(RESLIST, ["h", "gb", ""]))
 # FOR_FREE = the amount of a given resource that we give 'for free': counted as used for the rating
 # the FOR_FREE value of 'mem' is per core
 FOR_FREE = dict(zip(RESLIST, [0.0, 2.0, 0.0]))
 LEVELS = dict(zip(RESLIST, [(50, 75, 99), (50, 75, 95), (70, 85, 101)]))  # usage levels in %: (medium, good, danger)
-NOALERT = False
-NOCOLOR = False
 WAITTIME = 1.0 / 12  # do not show ncore usage before this time
-COLORCODE = {'good': 'green', 'medium': 'yellow', 'bad': 'red', '-': 'blue', 'danger': 'magenta'}
+COLORCODE = {"good": "green", "medium": "yellow", "bad": "red", "-": "blue", "danger": "magenta"}
 FGCOL = {  # foreground colors
-    'green': u'\u001b[32m',
-    'yellow': u'\u001b[33m',
-    'red': u'\u001b[31m',
-    'blue': u'\u001b[34m',
-    'magenta': u'\u001b[35m',
-    'reset': u'\u001b[0m',
+    "green": u"\u001b[32m",
+    "yellow": u"\u001b[33m",
+    "red": u"\u001b[31m",
+    "blue": u"\u001b[34m",
+    "magenta": u"\u001b[35m",
+    "reset": u"\u001b[0m",
 }

@@ -39,9 +39,15 @@ from vsc.utils.run import run
 
 from vsc.myresources.constants import VERSION
 from vsc.myresources.utils import (
-    write_header, write_header_csv, write_alerts,
-    write_string, calc_usage, parse_xml, csv_string,
-    usage_string, new_job,
+    write_header,
+    write_header_csv,
+    write_alerts,
+    write_string,
+    calc_usage,
+    parse_xml,
+    csv_string,
+    usage_string,
+    new_job,
 )
 
 
@@ -49,14 +55,12 @@ def demo_myresources(alerts=True):
     write_header()
     for i in range(1, 5):
         job = new_job()
-        job.update({
-            'jobid': str(i + 100000),
-            'jobname': 'my_super_job%s' % i,
-            'state': 'C',
-        })
-        job['mem'].update({'avail': 20, 'used': i * 5})
-        job['walltime'].update({'avail': 16, 'used': i * 4})
-        job['ncore'].update({'avail': 4, 'used': i})
+        job.update(
+            {"jobid": str(i + 100000), "jobname": "my_super_job%s" % i, "state": "C",}
+        )
+        job["mem"].update({"avail": 20, "used": i * 5})
+        job["walltime"].update({"avail": 16, "used": i * 4})
+        job["ncore"].update({"avail": 4, "used": i})
 
         job = calc_usage(job)
         ustring = usage_string(job)
@@ -64,7 +68,7 @@ def demo_myresources(alerts=True):
 
         if not alerts:
             write_alerts(job)
-        print('')
+        print("")
 
 
 def main():
@@ -89,21 +93,24 @@ Color codes corresponding to ratings:
         """,
         formatter_class=RawDescriptionHelpFormatter,
     )
-    parser.add_argument('jobid', help='show only resources for given jobID(s) (default: show all)', nargs='*')
-    parser.add_argument('-a', '--noalert', dest='noalert', help='do not show alert messages', action='store_true')
-    parser.add_argument('-f', '--infile', dest='infile', help="xml file (output of 'qstat -xt')")
-    parser.add_argument('-c', '--nocolor', dest='nocolor', help='do not use colors in the output', action='store_true')
-    parser.add_argument('--csv', dest='csv', help='print as csv', action='store_true')
+    parser.add_argument("jobid", help="show only resources for given jobID(s) (default: show all)", nargs="*")
+    parser.add_argument("-a", "--noalert", dest="noalert", help="do not show alert messages", action="store_true")
+    parser.add_argument("-f", "--infile", dest="infile", help="xml file (output of 'qstat -xt')")
+    parser.add_argument("-c", "--nocolor", dest="nocolor", help="do not use colors in the output", action="store_true")
+    parser.add_argument("--csv", dest="csv", help="print as csv", action="store_true")
     parser.add_argument(
-        '-s', '--state', dest='state',
-        help='show only jobs with given state(s) as comma-separated list: "Q,H,R,E,C" (default: show all)')
-    parser.add_argument('-d', '--demo', dest='demo', help='show demo output and exit', action='store_true')
-    parser.add_argument('-v', '--version', dest='version', help='show version and exit', action='store_true')
+        "-s",
+        "--state",
+        dest="state",
+        help='show only jobs with given state(s) as comma-separated list: "Q,H,R,E,C" (default: show all)',
+    )
+    parser.add_argument("-d", "--demo", dest="demo", help="show demo output and exit", action="store_true")
+    parser.add_argument("-v", "--version", dest="version", help="show version and exit", action="store_true")
 
     args = parser.parse_args()
 
     if args.version:
-        print('version: %s' % VERSION)
+        print("version: %s" % VERSION)
         sys.exit()
 
     if args.jobid:
@@ -111,7 +118,7 @@ Color codes corresponding to ratings:
             try:
                 int(i)
             except ValueError:
-                raise ValueError('%s is not a valid jobID' % i)
+                raise ValueError("%s is not a valid jobID" % i)
 
     if args.demo:
         demo_myresources(alerts=not args.noalert)
@@ -121,10 +128,10 @@ Color codes corresponding to ratings:
         try:
             tree = ET.parse(args.infile)
         except (IOError, ET.ParseError):
-            print('Error parsing xml file: %s' % args.infile)
+            print("Error parsing xml file: %s" % args.infile)
             sys.exit()
     else:
-        _, xmlstring = run('qstat -xt')
+        _, xmlstring = run("qstat -xt")
         tree = ET.ElementTree(ET.fromstring(xmlstring))
 
     root = tree.getroot()
@@ -139,11 +146,11 @@ Color codes corresponding to ratings:
     for jobdata in root:
         job = parse_xml(jobdata)
         if args.jobid:
-            if job['jobid'] not in args.jobid:
+            if job["jobid"] not in args.jobid:
                 continue
         if args.state:
-            states = args.state.split(',')
-            if job['state'] not in states:
+            states = args.state.split(",")
+            if job["state"] not in states:
                 continue
 
         job = calc_usage(job)
@@ -155,15 +162,15 @@ Color codes corresponding to ratings:
             write_string(ustring)
             if not args.noalert:
                 write_alerts(job)
-            print('')
+            print("")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-#    suppress the following error when piping the output:
-#        close failed in file object destructor:
-#        sys.excepthook is missing
-#        lost sys.stderr
+    #    suppress the following error when piping the output:
+    #        close failed in file object destructor:
+    #        sys.excepthook is missing
+    #        lost sys.stderr
     try:
         sys.stdout.close()
     except IOError:

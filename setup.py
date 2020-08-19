@@ -39,27 +39,21 @@ with open("lib/vsc/myresources/constants.py") as fp:
     exec(fp.read(), CONSTANTS)
 
 PACKAGE = {
-    'version': CONSTANTS['VERSION'],
-    'author': [sm],
-    'maintainer': [sm],
-    'setup_requires': [
-        'vsc-install >= 0.15.10',
-    ],
-    'install_requires': [
-        'vsc-base >= 3.0.0',
-        'lxml',
-    ],
-    'excluded_pkgs_rpm': ['vsc'],
-    'keywords': 'job resource usage torque HPC',
-    'description': 'myresources calculates job resource usage for running or recently finished jobs',
-    'url': 'https://github.com/sisc-hpc/myresources',
-    'classifiers': [
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.6',
-        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+    "version": CONSTANTS["VERSION"],
+    "author": [sm],
+    "maintainer": [sm],
+    "setup_requires": ["vsc-install >= 0.15.10",],
+    "install_requires": ["vsc-base >= 3.0.0", "lxml",],
+    "excluded_pkgs_rpm": ["vsc"],
+    "keywords": "job resource usage torque HPC",
+    "description": "myresources calculates job resource usage for running or recently finished jobs",
+    "url": "https://github.com/sisc-hpc/myresources",
+    "classifiers": [
+        "Programming Language :: Python :: 2.7",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
 }
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     shared_setup.action_target(PACKAGE)

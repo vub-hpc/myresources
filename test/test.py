@@ -32,6 +32,7 @@ test script
 from __future__ import print_function
 import os
 import sys
+
 try:
     from StringIO import StringIO  # Python 2
 except ImportError:
@@ -40,14 +41,11 @@ except ImportError:
 import xml.etree.cElementTree as ET
 
 from vsc.install.testing import TestCase
-from vsc.myresources.utils import (
-    write_header, write_alerts, write_string,
-    calc_usage, parse_xml, usage_string
-)
+from vsc.myresources.utils import write_header, write_alerts, write_string, calc_usage, parse_xml, usage_string
 
 
 def read_file(filename):
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         return f.read()
 
 
@@ -55,7 +53,7 @@ def dummy_main(inputfile):
     try:
         tree = ET.parse(inputfile)
     except (IOError, ET.ParseError):
-        print('Error parsing xml file: %s' % inputfile)
+        print("Error parsing xml file: %s" % inputfile)
 
     root = tree.getroot()
     write_header()
@@ -66,7 +64,7 @@ def dummy_main(inputfile):
         ustring = usage_string(job)
         write_string(ustring)
         write_alerts(job)
-        print('')
+        print("")
 
 
 class Testing(TestCase):
@@ -75,9 +73,9 @@ class Testing(TestCase):
         stdout_orig = sys.stdout
 
         for i in range(1, 19):
-            ref_out = read_file(os.path.join(test_dir, 'ref_output', 'qstat%s.out' % i))
+            ref_out = read_file(os.path.join(test_dir, "ref_output", "qstat%s.out" % i))
             output = StringIO()
             sys.stdout = output
-            dummy_main(os.path.join(test_dir, 'qstat_xml', 'qstat%s.xml' % i))
+            dummy_main(os.path.join(test_dir, "qstat_xml", "qstat%s.xml" % i))
             sys.stdout = stdout_orig
             self.assertEqual(ref_out, output.getvalue(), "test %d failed" % i)
