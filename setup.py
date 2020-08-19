@@ -44,13 +44,12 @@ PACKAGE = {
     'maintainer': [sm],
     'setup_requires': [
         'vsc-install >= 0.15.10',
-        'lxml',
     ],
     'install_requires': [
         'vsc-base >= 3.0.0',
+        'lxml',
     ],
     'excluded_pkgs_rpm': ['vsc'],
-    'tests_require': ['mock'],
     'keywords': 'job resource usage torque HPC',
     'description': 'myresources calculates job resource usage for running or recently finished jobs',
     'url': 'https://github.com/sisc-hpc/myresources',
