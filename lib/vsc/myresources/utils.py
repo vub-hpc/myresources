@@ -364,7 +364,9 @@ def alert_exit(job):
 
 def write_alerts(job):
     alerts = {"mem": alert_mem, "walltime": alert_walltime, "ncore": alert_ncore}
-    for res in alerts.keys():
+    # Todo: this wrongly assumed that the order of keys in a dict is fixed
+    # I've replace it with a list of the order it expects to not break any tests
+    for res in ["mem", "walltime", "ncore"]:
         if job[res]["usage"] is not None:
             alerts[res](job)
     if job["exit_status"] is not None:
