@@ -30,7 +30,6 @@ test script
 """
 
 from __future__ import print_function
-import errno
 import os
 import sys
 try:
@@ -50,21 +49,6 @@ from vsc.myresources.utils import (
 def read_file(filename):
     with open(filename, 'r') as f:
         return f.read()
-
-
-def write_file(filename, data):
-    with open(filename, 'w') as f:
-        f.write(data)
-
-
-def mkdir_p(path):
-    try:
-        os.makedirs(path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST:
-            pass
-        else:
-            raise
 
 
 def dummy_main(inputfile):
@@ -87,16 +71,13 @@ def dummy_main(inputfile):
 
 class Testing(TestCase):
     def test_qstat_xml_files(self):
-        refdir = 'ref_output'
-        testdir = 'test_output'
         test_dir = os.path.dirname(os.path.abspath(__file__))
-        mkdir_p(os.path.join(test_dir, testdir))
         stdout_orig = sys.stdout
 
         for i in range(1, 19):
-            ref_out = read_file(os.path.join(test_dir, '%s/qstat%s.out' % (refdir, i)))
+            ref_out = read_file(os.path.join(test_dir, 'ref_output', 'qstat%s.out' % i))
             output = StringIO()
             sys.stdout = output
-            dummy_main(os.path.join(test_dir, 'qstat_xml/qstat%s.xml' % i))
+            dummy_main(os.path.join(test_dir, 'qstat_xml', 'qstat%s.xml' % i))
             sys.stdout = stdout_orig
             self.assertEqual(ref_out, output.getvalue(), "test %d failed" % i)
