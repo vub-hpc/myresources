@@ -230,7 +230,7 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
     bar_output = bar_output.ljust(49)
     if not color:
         bar_output = bar_output[:31]
-    return bar_output
+    return bar_output.encode('utf-8')
 
 
 def usage_string(job, color=True):

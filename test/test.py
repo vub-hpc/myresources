@@ -31,11 +31,16 @@ test script
 
 from __future__ import print_function
 import errno
-from myresources import *
 import os
+import sys
+import xml.etree.cElementTree as ET
 from unittest import skip
 from vsc.install.testing import TestCase
 
+from vsc.myresources.utils import (
+    write_header, write_alerts, write_string,
+    calc_usage, parse_xml, usage_string
+)
 
 
 def read_file(filename):
@@ -49,28 +54,52 @@ def write_file(filename, data):
 
 
 def mkdir_p(path):
-  try:
-    os.makedirs(path)
-  except OSError as exc:
-    if exc.errno == errno.EEXIST:
-      pass
-    else: raise
+    try:
+        os.makedirs(path)
+    except OSError as exc:
+        if exc.errno == errno.EEXIST:
+            pass
+        else:
+            raise
+
+
+def dummy_main(inputfile):
+    try:
+        tree = ET.parse(inputfile)
+    except (IOError, ET.ParseError):
+        print('Error parsing xml file: %s' % inputfile)
+
+    root = tree.getroot()
+    write_header()
+
+    for jobdata in root:
+        job = parse_xml(jobdata)
+        job = calc_usage(job)
+        ustring = usage_string(job)
+        write_string(ustring)
+        write_alerts(job)
+        print('')
 
 
 class Testing(TestCase):
-    @skip("no yet")
     def test_qstat_xml_files(self):
         ref_outlist = []
         outlist = []
         refdir = 'ref_output'
         testdir = 'test_output'
-        mkdir_p(testdir)
+        test_dir = os.path.dirname(os.path.abspath(__file__))
+        mkdir_p(os.path.join(test_dir, testdir))
+        stdout_orig = sys.stdout
 
         for i in range(1, 19):
-            ref_out = read_file('%s/qstat%s.out' % (refdir, i))
-            out = run_cmd('./myresources -f qstat_xml/qstat%s.xml' % i)
-            write_file('%s/qstat%s.out' % (testdir, i), out)
+            ref_out = read_file(os.path.join(test_dir, '%s/qstat%s.out' % (refdir, i)))
+            out_file = os.path.join(test_dir, '%s/qstat%s.out' % (testdir, i))
+            # todo: just put this in a variable instead of file?
+            sys.stdout = open(out_file, 'w')
+            dummy_main(os.path.join(test_dir, 'qstat_xml/qstat%s.xml' % i))
+            sys.stdout.close()
+            sys.stdout = stdout_orig
             ref_outlist.append(ref_out)
-            outlist.append(out)
+            outlist.append(read_file(out_file))
 
         self.assertEqual(outlist, ref_outlist)
