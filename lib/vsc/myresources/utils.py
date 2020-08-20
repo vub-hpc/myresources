@@ -174,7 +174,7 @@ def calc_usage(job):
     return job
 
 
-def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, empty_bar=False, maxlen=20, color=True):
+def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, empty_bar=False, maxlen=20, colors=True):
     """
     generate a color bar (string) showing resource usage and rating with color code: good/medium/bad
     arguments:
@@ -213,7 +213,7 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
     unusedchar = "-"
     usedchar = u"\u2588"  # closed block
 
-    if color:
+    if colors:
         fgcolor = FGCOL[COLORCODE[rating]]
         fgreset = FGCOL["reset"]
     else:
@@ -230,12 +230,12 @@ def usage_bar(usage, usage_for_free=0.0, lev=(50, 75, 95), show_rating=True, emp
 
     bar_output = "|%s%s%s%s| (%s%s%s)" % (fgcolor, usedstr, fgreset, unusedstr, fgcolor, rating, fgreset,)
     bar_output = bar_output.ljust(49)
-    if not color:
+    if not colors:
         bar_output = bar_output[:31]
     return bar_output.encode("utf-8")
 
 
-def usage_string(job, color=True):
+def usage_string(job, colors=True):
     """ write memory, walltime, and ncore usage to stdout """
 
     jobstr = " ".join([job["jobid"].rjust(13), job["state"], job["jobname"],])
@@ -275,7 +275,7 @@ def usage_string(job, color=True):
             job[res]["usage"],
             usage_for_free=usage_for_free,
             empty_bar=empty_bar,
-            color=color,
+            colors=colors,
             show_rating=show_rating,
             lev=LEVELS[res],
         )
