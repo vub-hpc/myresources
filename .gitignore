@@ -1,11 +1,39 @@
-.pydevproject
-.project
+*.py[co]
 *~
-*.pyc
-*.pyo
-*.nja
-build/
-dist/
-*egg-info/
-*.sw[op]
+
+# Packages
+*.eggs
+.eggs*
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+#Translations
+*.mo
+
+# Vim
+.*.sw[op]
+
+#Mr Developer
+.mr.developer.cfg
+
+html
+test-reports
+
+setup.cfg
+
 test_output/

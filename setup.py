@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Copyright 2017-2019 Vrije Universiteit Brussel
+# Copyright 2017-2020 Vrije Universiteit Brussel
 #
 # This file is part of myresources,
 # originally created by the HPC team of Vrije Universiteit Brussel (https://hpc.vub.be),
@@ -28,22 +28,32 @@
 """
 installation script
 
-@author: Samuel Moors, Vrije Universiteit Brussel (VUB)
+@author: Samuel Moors (Vrije Universiteit Brussel)
 """
+import vsc.install.shared_setup as shared_setup
+from vsc.install.shared_setup import sm
 
-from setuptools import setup
-from myresources import VERSION
+# get the version from the constants.py file
+CONSTANTS = {}
+with open("lib/vsc/myresources/constants.py") as fp:
+    exec(fp.read(), CONSTANTS)
 
-setup(
-    name='myresources',
-    version=VERSION,
-    description='myresources calculates job resource usage for running or recently finished jobs',
-    url='https://github.com/sisc-hpc/myresources',
-    classifiers=[
-        'Programming Language :: Python :: 2.7',
-        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+PACKAGE = {
+    "version": CONSTANTS["VERSION"],
+    "author": [sm],
+    "maintainer": [sm],
+    "setup_requires": ["vsc-install >= 0.15.10",],
+    "install_requires": ["vsc-base >= 3.0.0", "lxml",],
+    "excluded_pkgs_rpm": ["vsc"],
+    "keywords": "job resource usage torque HPC",
+    "description": "myresources calculates job resource usage for running or recently finished jobs",
+    "url": "https://github.com/sisc-hpc/myresources",
+    "classifiers": [
+        "Programming Language :: Python :: 2.7",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
-    scripts=['myresources'],
-    keywords='job resource usage torque HPC',
-)
+}
 
+
+if __name__ == "__main__":
+    shared_setup.action_target(PACKAGE)
