@@ -51,7 +51,7 @@ from vsc.myresources.utils import (
 )
 
 
-def demo_myresources(alerts=True):
+def demo_myresources(alerts=True, colors=True):
     write_header()
     for i in range(1, 5):
         job = new_job()
@@ -63,10 +63,10 @@ def demo_myresources(alerts=True):
         job["ncore"].update({"avail": 4, "used": i})
 
         job = calc_usage(job)
-        ustring = usage_string(job)
+        ustring = usage_string(job, colors=colors)
         write_string(ustring)
 
-        if not alerts:
+        if alerts:
             write_alerts(job)
         print("")
 
@@ -94,9 +94,11 @@ Color codes corresponding to ratings:
         formatter_class=RawDescriptionHelpFormatter,
     )
     parser.add_argument("jobid", help="show only resources for given jobID(s) (default: show all)", nargs="*")
-    parser.add_argument("-a", "--noalert", dest="noalert", help="do not show alert messages", action="store_true")
+    parser.add_argument(
+        "-a", "--noalert", dest="alerts", help="do not show alert messages", action="store_false", default=True)
     parser.add_argument("-f", "--infile", dest="infile", help="xml file (output of 'qstat -xt')")
-    parser.add_argument("-c", "--nocolor", dest="nocolor", help="do not use colors in the output", action="store_true")
+    parser.add_argument(
+        "-c", "--nocolor", dest="colors", help="do not use colors in the output", action="store_false", default=True)
     parser.add_argument("--csv", dest="csv", help="print as csv", action="store_true")
     parser.add_argument(
         "-s",
@@ -121,7 +123,7 @@ Color codes corresponding to ratings:
                 raise ValueError("%s is not a valid jobID" % i)
 
     if args.demo:
-        demo_myresources(alerts=not args.noalert)
+        demo_myresources(alerts=args.alerts)
         sys.exit()
 
     if args.infile:
@@ -158,9 +160,9 @@ Color codes corresponding to ratings:
             csvstring = csv_string(job)
             write_string(csvstring)
         else:
-            ustring = usage_string(job, color=not args.nocolor)
+            ustring = usage_string(job, colors=args.colors)
             write_string(ustring)
-            if not args.noalert:
+            if args.alerts:
                 write_alerts(job)
             print("")
 
