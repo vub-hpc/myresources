@@ -25,7 +25,7 @@
 """
 a bunch of constants
 """
-VERSION = 3.1
+VERSION = 3.2
 
 # globals
 RESLIST = ["walltime", "mem", "ncore"]

@@ -35,7 +35,7 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 import sys
 import xml.etree.cElementTree as ET
 
-from vsc.utils.run import run
+from vsc.utils.run import asyncloop
 
 from vsc.myresources.constants import VERSION
 from vsc.myresources.utils import (
@@ -133,7 +133,7 @@ Color codes corresponding to ratings:
             print("Error parsing xml file: %s" % args.infile)
             sys.exit()
     else:
-        _, xmlstring = run("qstat -xt")
+        _, xmlstring = asyncloop("qstat -xt")
         tree = ET.ElementTree(ET.fromstring(xmlstring))
 
     root = tree.getroot()
