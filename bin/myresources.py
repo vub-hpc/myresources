@@ -32,10 +32,10 @@ myrsources script
 
 from __future__ import division, print_function
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
-import os
 import sys
-import tempfile
 import xml.etree.cElementTree as ET
+
+from vsc.utils.run import asyncloop
 
 from vsc.myresources.constants import VERSION
 from vsc.myresources.utils import (
@@ -133,14 +133,8 @@ Color codes corresponding to ratings:
             print("Error parsing xml file: %s" % args.infile)
             sys.exit()
     else:
-        try:
-            # use tempfile to avoid deadlock for large qstat output
-            with tempfile.NamedTemporaryFile(prefix='/dev/shm/qstat.%s' % os.environ['USER'], delete=True) as f:
-                os.system('qstat -xt >%s' % f.name)
-                xmlstring = f.read()
-                tree = ET.ElementTree(ET.fromstring(xmlstring))
-        except (IOError, ET.ParseError):
-            print("Error parsing command output for 'qstat -xt'")
+        _, xmlstring = asyncloop("qstat -xt")
+        tree = ET.ElementTree(ET.fromstring(xmlstring))
 
     root = tree.getroot()
     if not root:
